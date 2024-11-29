@@ -4,8 +4,9 @@ public class FuncionarioHorista extends Funcionario {
     int horasTrabalhadas;
     double valorHora;
 
+
     public FuncionarioHorista(String nome, String cpf, int horasTrabalhadas, double valorHora){
-        super(cpf, nome);
+        super(nome, cpf);
         this.horasTrabalhadas = horasTrabalhadas;
         this.valorHora = valorHora;
     }

@@ -4,6 +4,7 @@ public class FuncionarioComissado extends Funcionario {
     double salarioBase;
     double comissao;
 
+
     public FuncionarioComissado(String nome, String cpf, double salarioBase, double comissao) {
         super(nome, cpf);
         this.salarioBase = salarioBase;

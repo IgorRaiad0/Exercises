@@ -1,7 +1,7 @@
 package Objetos;
 
 // classe abstrata
-public class Funcionario {
+public abstract class Funcionario {
     String nome;
     String cpf;
 
@@ -10,13 +10,10 @@ public class Funcionario {
         this.nome = nome;
     }
 
-    public double calcularSalario(){
-        return ' ';
-    }
+    public abstract double calcularSalario();
 
     public String toString() {
         return nome + cpf;
     }
-
 
 }
