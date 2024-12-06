@@ -67,7 +67,6 @@ public class CadastrarAluno {
 
     // Remover aluno por índice
     public String removerComIndice(int indice) {
-        // Verifica se o índice é válido
         if (!verificarIndice(indice)) {
             System.out.println("Erro: Índice inválido ou não ocupado por um aluno.");
             return null;
@@ -75,26 +74,19 @@ public class CadastrarAluno {
 
         // Guarda o nome do aluno para retornar
         String nomeRemovido = listaAlunos[indice].getNome();
-
-        // Se for o primeiro aluno
         if (indice == 0) {
             removerNoInicio();
         }
-        // Se for o último aluno
         else if (indice == contador - 1) {
             removerNoFinal();
         }
-        // Se for um aluno no meio
         else {
-            // Desloca os alunos à direita para a esquerda
             for (int i = indice; i < contador - 1; i++) {
                 listaAlunos[i] = listaAlunos[i + 1];
             }
             listaAlunos[contador - 1] = null; // A última posição fica nula
             contador--;
         }
-
-        // Retorna o nome do aluno removido
         return nomeRemovido;
     }
 
